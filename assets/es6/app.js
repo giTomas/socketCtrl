@@ -1,3 +1,7 @@
+// two states btn on/off
+// 
+
+
 const pass = '&pass=config';
 const event = '/event?port=';
 
@@ -21,13 +25,13 @@ const makeString = socket =>
                     string + socket : socket ?
                     string + '1' : string + '0';
 
-const makeString2 = sockets.map(socket =>
-                                  typeof socket === 'string' ?
-                                  string + socket : socket ?
-                                  string + '1' : string + '0'
+const makeString2 = (arr) =>
+                      arr.map(x =>
+                        typeof x === 'string' ? x :
+                        x ? '1' : '0'
 ).join('');
 
-console.log(makeString2)
+console.log(makeString2(sockets));
 
 const composeUrl = ({pass, event}) =>
                     string => event + string + pass;

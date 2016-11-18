@@ -1,5 +1,9 @@
 'use strict';
 
+// two states btn on/off
+// 
+
+
 var pass = '&pass=config';
 var event = '/event?port=';
 
@@ -33,6 +37,14 @@ var makeString = function makeString(socket) {
     return typeof socket === 'string' ? string + socket : socket ? string + '1' : string + '0';
   };
 };
+
+var makeString2 = function makeString2(arr) {
+  return arr.map(function (x) {
+    return typeof x === 'string' ? x : x ? '1' : '0';
+  }).join('');
+};
+
+console.log(makeString2(sockets));
 
 var composeUrl = function composeUrl(_ref) {
   var pass = _ref.pass,
