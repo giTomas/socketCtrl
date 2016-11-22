@@ -63,3 +63,6 @@ html {
 
 .clearfix:after {
   clear: both; }
+
+button {
+  margin: 20px; }

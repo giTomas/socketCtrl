@@ -1,7 +1,7 @@
 'use strict';
 
 // two states btn on/off
-// 
+//
 
 
 var pass = '&pass=config';

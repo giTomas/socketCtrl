@@ -1,5 +1,5 @@
 // two states btn on/off
-// 
+//
 
 
 const pass = '&pass=config';
